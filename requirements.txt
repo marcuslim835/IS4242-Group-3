@@ -1,0 +1,6 @@
+iPython
+librosa
+matplotlib
+numpy
+pandas
+seaborn
