@@ -5,3 +5,5 @@ numpy
 pandas
 seaborn
 mlflow
+scikit-learn
+tensorflow
