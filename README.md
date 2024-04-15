@@ -1,7 +1,8 @@
 # Academic Year 2023/2024 Semester 2
 **IS4242 Group 3**
 
-**Audio Sentiment Analysis: Human Voice Emotion Recognition**
+## EmoVoice: Human Voice Emotion Recognition
+![alt text](favicon.png)
 
 ![alt text](readme_resources/tkinter1.png)
 ![alt text](readme_resources/tkinter2.png)
