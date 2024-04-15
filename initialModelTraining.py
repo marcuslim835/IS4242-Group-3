@@ -12,7 +12,7 @@ import mlflow
 from mlflow.models import infer_signature
 
 def loadData():
-    data = pd.read_csv('IS4242 Data.csv')
+    data = pd.read_csv('Notebooks/IS4242 Data.csv')
     data.shape
     # Data Splitting
     X = data.drop(columns=["label", "speech"])

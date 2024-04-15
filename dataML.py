@@ -30,7 +30,6 @@ class DataML:
         def extract_tonnetz(filename):
             y, sr = librosa.load(filename)
             tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(y), sr=sr).T, axis=0)
-            print(tonnetz)
             return tonnetz
         def processData(df):
             # mfcc
