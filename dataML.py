@@ -30,6 +30,7 @@ class DataML:
         def extract_tonnetz(filename):
             y, sr = librosa.load(filename)
             tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(y), sr=sr).T, axis=0)
+            print(tonnetz)
             return tonnetz
         def processData(df):
             # mfcc
@@ -48,18 +49,19 @@ class DataML:
             new_df = pd.concat([new_df, spectral_df], axis=1)
 
             # tonnetz
-            tonnetz_columns = ['tonnetz_' + str(i) for i in range(1, 8)]
-            tonnetz_df = pd.DataFrame(df['speech'].apply(lambda x: extract_spectral_contrast(x)).tolist(), columns=tonnetz_columns)
+            tonnetz_columns = ['tonnetz_' + str(i) for i in range(1, 7)]
+            tonnetz_df = pd.DataFrame(df['speech'].apply(lambda x: extract_tonnetz(x)).tolist(), columns=tonnetz_columns)
             new_df = pd.concat([new_df, tonnetz_df], axis=1)
             return new_df
         data = processData(pd.DataFrame({"speech": [path]}))
-        data = data[['mfcc_1', 'mfcc_2', 'mfcc_3', 'mfcc_4', 'mfcc_5',
-                    'mfcc_6', 'mfcc_7', 'mfcc_9', 'mfcc_10', 'mfcc_12', 'mfcc_14',
-                    'mfcc_15', 'mfcc_17', 'mfcc_19', 'mfcc_20', 'mfcc_22', 'mfcc_23',
-                    'mfcc_24', 'mfcc_25', 'mfcc_26', 'mfcc_27', 'mfcc_28', 'mfcc_29',
-                    'mfcc_30', 'mfcc_31', 'mfcc_32', 'mfcc_33', 'mfcc_34', 'mfcc_36',
-                    'mfcc_37', 'mfcc_38', 'mfcc_39', 'mfcc_40', 'chroma_1', 'chroma_8',
-                    'spectral_1', 'spectral_2']]
+        data = data[['mfcc_1', 'mfcc_2', 'mfcc_3', 'mfcc_4', 'mfcc_5', 
+                    'mfcc_6', 'mfcc_7', 'mfcc_9', 'mfcc_10', 'mfcc_12', 'mfcc_14', 
+                    'mfcc_15', 'mfcc_17', 'mfcc_19', 'mfcc_20', 'mfcc_22', 'mfcc_23', 
+                    'mfcc_24', 'mfcc_25', 'mfcc_26', 'mfcc_27', 'mfcc_28', 'mfcc_29', 
+                    'mfcc_30', 'mfcc_31', 'mfcc_32', 'mfcc_33', 'mfcc_34', 'mfcc_36', 
+                    'mfcc_37', 'mfcc_38', 'mfcc_39', 'mfcc_40', 'chroma_1', 'chroma_8', 
+                    'spectral_1', 'spectral_2', 'tonnetz_1', 'tonnetz_2', 'tonnetz_3', 
+                    'tonnetz_4', 'tonnetz_5', 'tonnetz_6']]
         return data
 
     def getPredictionResults(self) -> int:
