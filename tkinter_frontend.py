@@ -24,7 +24,7 @@ class FrontEnd:
         window.attributes('-topmost', True)
         window.attributes('-topmost', False)
 
-        mainLabel = Label(window, text="Audio Emotion Predictor App", fg='black', font=("Bahnschrift", 32))
+        mainLabel = Label(window, text="EmoVoice", fg='black', font=("Bahnschrift", 32))
         mainLabel.pack(fill="x", expand=False, side="top", padx=(5, 5), pady=(5, 5))
 
         ### WIDGET 1 ###
@@ -89,13 +89,13 @@ class FrontEnd:
         # other properties
         window.minsize(575, 575)
         window.protocol("WM_DELETE_WINDOW", self.on_closing) # if setup is closed directly
-        # window.iconphoto(False, PhotoImage(file='favicon.png'))
-        window.title('Audio Emotion Predictor')
+        window.iconphoto(False, PhotoImage(file='favicon.png'))
+        window.title('EmoVoice: Predicting Emotions from Audio')
         window.geometry("600x600+400+200")
         window.mainloop()
 
     def selectFile(self):
-        fileName = filedialog.askopenfilename(initialdir="/", title="Select An Audio File", filetypes=(("wav files", "*.wav"), ("mp3 files", "*.mp3")))
+        fileName = filedialog.askopenfilename(initialdir="/", title="Select An Audio File", filetypes=(("wav files", "*.wav"), ("mp3 files", "*.mp3"), ("telegram ogg files", "*.ogg")))
         self.fileName.set(fileName)
     
     def removeFile(self):
