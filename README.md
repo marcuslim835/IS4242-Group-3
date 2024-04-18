@@ -6,11 +6,11 @@
 
 ## Initial Setup
 1. Run `pip install -r requirements.txt` in command prompt
-2. Run the command `mlflow ui` in command prompt to start mlflow on localhost
+2. Run the command `mlflow ui --port 5001` in command prompt to start mlflow on localhost
 3. Run `initialModelTraining.py` to create and store the model on mlflow
 
 ## To run the application to predict audio
-1. Run the command `mlflow ui` in command prompt to start mlflow on localhost (if it has not already been started)
+1. Run the command `mlflow ui --port 5001` in command prompt to start mlflow on localhost (if it has not already been started)
 2. Run the Python file `tkinter_frontend.py`
 3. Follow the steps in the tkinter UI to upload, submit, and review model predictions.
 

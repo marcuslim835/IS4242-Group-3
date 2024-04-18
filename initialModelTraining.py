@@ -67,7 +67,7 @@ def evaluate_model(model, model_name, x_test, y_test):
 
 def trainModel(X_train, X_test, y_train, y_test):
     # Set tracking server uri for logging
-    mlflow.set_tracking_uri(uri="http://localhost:5000")
+    mlflow.set_tracking_uri(uri="http://localhost:5001")
     # Create a new MLflow Experiment
     mlflow.set_experiment(f"Training - Audio Emotion Predictor")
     with mlflow.start_run():

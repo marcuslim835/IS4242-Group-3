@@ -66,7 +66,7 @@ class DataML:
     def getPredictionResults(self) -> int:
         data = self.processAudioClip(self.path)
         # Set tracking server uri for logging
-        mlflow.set_tracking_uri(uri="http://localhost:5000")
+        mlflow.set_tracking_uri(uri="http://localhost:5001")
         # Create a new MLflow Experiment
         mlflow.set_experiment(f"Predictions - Audio Emotion Predictor")
         # Start an MLflow run
