@@ -14,7 +14,7 @@
 2. Run the Python file `tkinter_frontend.py`
 3. Follow the steps in the tkinter UI to upload, submit, and review model predictions.
 
-Note: Supported audio file formats are .wav, .mp3, .ogg
+Note: Supported audio file formats are `.wav`, `.mp3`, `.ogg`
 
 ![alt text](readme_resources/tkinter1.png)
 ![alt text](readme_resources/tkinter2.png)
@@ -36,7 +36,7 @@ Note: Supported audio file formats are .wav, .mp3, .ogg
 ## Other Miscellaneous Items
 
 ### Manually checking model training performance
-1. Go to `localhost:5000` on your browser
+1. Go to `localhost:5001` on your browser
 2. Under `Experiments` >> `Training - Audio Emotion Predictor`, select the only model.
 
 ![alt text](readme_resources/model1.png)
@@ -46,7 +46,7 @@ Note: Supported audio file formats are .wav, .mp3, .ogg
 ![alt text](readme_resources/model2.png)
 
 ### Manually checking predictions
-1. Go to `localhost:5000` on your browser
+1. Go to `localhost:5001` on your browser
 2. Under `Experiments` >> `Predictions - Audio Emotion Predictor`, pick the run you are interested in.
 
 ![alt text](readme_resources/experiment1.png)
