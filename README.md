@@ -5,6 +5,7 @@
 ![alt text](favicon.png)
 
 ## Initial Setup
+**IMPORTANT NOTE: MLflow is buggy on MacOS, so we recommend that you use a Windows Based OS to run.**
 1. Run `pip install -r requirements.txt` in command prompt
 2. Run the command `mlflow ui --port 5001` in command prompt to start mlflow on localhost
 3. Run `initialModelTraining.py` to create and store the model on mlflow
